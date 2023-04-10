@@ -1,1 +1,40 @@
-# uid2-ios-plugin-google-gma
+# UID2 Google GMA iOS Plugin
+
+A plugin for integrating [UID2](https://github.com/IABTechLab/uid2docs) and [Google GMA](https://developers.google.com/admob/ios/quick-start) into iOS applications.
+
+[![License: Apache](https://img.shields.io/badge/License-Apache-green.svg)](https://www.apache.org/licenses/)
+[![Swift](https://img.shields.io/badge/Swift-5-orange)](https://img.shields.io/badge/Swift-5-orange)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-blue)](https://img.shields.io/badge/Swift_Package_Manager-compatible-blue)
+
+## Repository Structure
+
+```
+.
+├── Development
+│   ├── UID2GoogleIMADevelopmentApp
+│   └── UID2GoogleIMADevelopmentApp.xcodeproj
+├── Package.swift
+├── LICENSE.md
+├── README.md
+├── Sources
+│   └── UID2GMAPlugin
+└── Tests
+    └── UID2GMAPluginTests
+```
+
+## Requirements
+
+* Xcode 14.0+
+
+| Platform | Minimum target | Swift Version |
+| --- | --- | --- |
+| iOS | 13.0+ | 5.0+ |
+
+## Development
+
+The UID2GMAPlugin is a standalone headless library defined and managed by the Swift Package Manager via `Package.swift`.  As such the `UID2GoogleIMADevelopmentApp` is the primary way for developing the SDK.  Use Xcode to open `Development/UID2GoogleIMADevelopmentApp/UID2GoogleIMADevelopmentApp.xcodeproj` to begin development.
+
+## License
+
+UID2 is released under the Apache V2 license. [See LICENSE](https://github.com/IABTechLab/uid2-ios-sdk/blob/main/LICENSE.md) for details.
+
