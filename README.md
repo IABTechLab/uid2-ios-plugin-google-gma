@@ -11,8 +11,8 @@ A plugin for integrating [UID2](https://github.com/IABTechLab/uid2docs) and [Goo
 ```
 .
 ├── Development
-│   ├── UID2GoogleIMADevelopmentApp
-│   └── UID2GoogleIMADevelopmentApp.xcodeproj
+│   ├── UID2GoogleGMADevelopmentApp
+│   └── UID2GoogleGMADevelopmentApp.xcodeproj
 ├── Package.swift
 ├── LICENSE.md
 ├── README.md
@@ -32,9 +32,8 @@ A plugin for integrating [UID2](https://github.com/IABTechLab/uid2docs) and [Goo
 
 ## Development
 
-The UID2GMAPlugin is a standalone headless library defined and managed by the Swift Package Manager via `Package.swift`.  As such the `UID2GoogleIMADevelopmentApp` is the primary way for developing the SDK.  Use Xcode to open `Development/UID2GoogleIMADevelopmentApp/UID2GoogleIMADevelopmentApp.xcodeproj` to begin development.
+The UID2GMAPlugin is a standalone headless library defined and managed by the Swift Package Manager via `Package.swift`.  As such the `UID2GoogleGMADevelopmentApp` is the primary way for developing the SDK.  Use Xcode to open `Development/UID2GoogleGMADevelopmentApp/UID2GoogleGMADevelopmentApp.xcodeproj` to begin development.
 
 ## License
 
 UID2 is released under the Apache V2 license. [See LICENSE](https://github.com/IABTechLab/uid2-ios-sdk/blob/main/LICENSE.md) for details.
-
