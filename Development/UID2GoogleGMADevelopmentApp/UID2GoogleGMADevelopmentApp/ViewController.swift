@@ -8,8 +8,8 @@
 //
 
 import GoogleMobileAds
-import UIKit
 import UID2
+import UIKit
 
 class ViewController: UIViewController {
 
