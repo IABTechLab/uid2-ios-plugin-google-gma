@@ -13,6 +13,7 @@
 		A217471629E79B5600EC20DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217471429E79B5600EC20DF /* Main.storyboard */; };
 		A217471829E79B5600EC20DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217471729E79B5600EC20DF /* Assets.xcassets */; };
 		A217471B29E79B5600EC20DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217471929E79B5600EC20DF /* LaunchScreen.storyboard */; };
+		A2E7019029E7A5DA00B9DFA1 /* UID2GMAPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = A2E7018F29E7A5DA00B9DFA1 /* UID2GMAPlugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A217471729E79B5600EC20DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A217471A29E79B5600EC20DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A217471C29E79B5600EC20DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E7018D29E7A5CA00B9DFA1 /* uid2-ios-plugin-google-gma */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "uid2-ios-plugin-google-gma"; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7019029E7A5DA00B9DFA1 /* UID2GMAPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +43,10 @@
 		A217470229E79B5600EC20DF = {
 			isa = PBXGroup;
 			children = (
+				A2E7018C29E7A5CA00B9DFA1 /* Packages */,
 				A217470D29E79B5600EC20DF /* UID2GoogleGMADevelopmentApp */,
 				A217470C29E79B5600EC20DF /* Products */,
+				A2E7018E29E7A5DA00B9DFA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,21 @@
 			path = UID2GoogleGMADevelopmentApp;
 			sourceTree = "<group>";
 		};
+		A2E7018C29E7A5CA00B9DFA1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7018D29E7A5CA00B9DFA1 /* uid2-ios-plugin-google-gma */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		A2E7018E29E7A5DA00B9DFA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = UID2GoogleGMADevelopmentApp;
+			packageProductDependencies = (
+				A2E7018F29E7A5DA00B9DFA1 /* UID2GMAPlugin */,
+			);
 			productName = UID2GoogleGMADevelopmentApp;
 			productReference = A217470B29E79B5600EC20DF /* UID2GoogleGMADevelopmentApp.app */;
 			productType = "com.apple.product-type.application";
@@ -364,6 +387,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2E7018F29E7A5DA00B9DFA1 /* UID2GMAPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UID2GMAPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A217470329E79B5600EC20DF /* Project object */;
 }
