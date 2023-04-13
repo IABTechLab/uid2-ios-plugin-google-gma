@@ -14,6 +14,10 @@
 		A217471829E79B5600EC20DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217471729E79B5600EC20DF /* Assets.xcassets */; };
 		A217471B29E79B5600EC20DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217471929E79B5600EC20DF /* LaunchScreen.storyboard */; };
 		A2E7019029E7A5DA00B9DFA1 /* UID2GMAPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = A2E7018F29E7A5DA00B9DFA1 /* UID2GMAPlugin */; };
+		E23A114C29E84C4800FAE364 /* Date+AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A114829E84C4700FAE364 /* Date+AppExtensions.swift */; };
+		E23A114D29E84C4800FAE364 /* uid2identity.json in Resources */ = {isa = PBXBuildFile; fileRef = E23A114929E84C4700FAE364 /* uid2identity.json */; };
+		E23A114E29E84C4800FAE364 /* String+AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A114A29E84C4800FAE364 /* String+AppExtensions.swift */; };
+		E23A114F29E84C4800FAE364 /* AppDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A114B29E84C4800FAE364 /* AppDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		A217471A29E79B5600EC20DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A217471C29E79B5600EC20DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2E7018D29E7A5CA00B9DFA1 /* uid2-ios-plugin-google-gma */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "uid2-ios-plugin-google-gma"; path = ../..; sourceTree = "<group>"; };
+		E23A114829E84C4700FAE364 /* Date+AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+AppExtensions.swift"; sourceTree = "<group>"; };
+		E23A114929E84C4700FAE364 /* uid2identity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uid2identity.json; sourceTree = "<group>"; };
+		E23A114A29E84C4800FAE364 /* String+AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AppExtensions.swift"; sourceTree = "<group>"; };
+		E23A114B29E84C4800FAE364 /* AppDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 		A217470D29E79B5600EC20DF /* UID2GoogleGMADevelopmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				E23A114729E84C2800FAE364 /* AppData */,
 				A217470E29E79B5600EC20DF /* AppDelegate.swift */,
 				A217471029E79B5600EC20DF /* SceneDelegate.swift */,
 				A217471229E79B5600EC20DF /* ViewController.swift */,
@@ -85,6 +94,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E23A114729E84C2800FAE364 /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+				E23A114B29E84C4800FAE364 /* AppDataLoader.swift */,
+				E23A114829E84C4700FAE364 /* Date+AppExtensions.swift */,
+				E23A114A29E84C4800FAE364 /* String+AppExtensions.swift */,
+				E23A114929E84C4700FAE364 /* uid2identity.json */,
+			);
+			path = AppData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +171,7 @@
 				A217471B29E79B5600EC20DF /* LaunchScreen.storyboard in Resources */,
 				A217471829E79B5600EC20DF /* Assets.xcassets in Resources */,
 				A217471629E79B5600EC20DF /* Main.storyboard in Resources */,
+				E23A114D29E84C4800FAE364 /* uid2identity.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A217471329E79B5600EC20DF /* ViewController.swift in Sources */,
+				E23A114E29E84C4800FAE364 /* String+AppExtensions.swift in Sources */,
+				E23A114F29E84C4800FAE364 /* AppDataLoader.swift in Sources */,
+				E23A114C29E84C4800FAE364 /* Date+AppExtensions.swift in Sources */,
 				A217470F29E79B5600EC20DF /* AppDelegate.swift in Sources */,
 				A217471129E79B5600EC20DF /* SceneDelegate.swift in Sources */,
 			);
