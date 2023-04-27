@@ -20,6 +20,10 @@ class UID2GMAMediationAdapter: NSObject {
 extension UID2GMAMediationAdapter: GADRTBAdapter {
 
     static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
+
+        // Ensure UID2Manager has started
+        _ = UID2Manager.shared
+
         completionHandler(nil)
     }
         
