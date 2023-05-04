@@ -11,6 +11,8 @@ Version Numbering follows [Semantic Versioning](https://semver.org) standards.  
 ### Release Checklist
 
 1. Create a Release PR
+    * Update / Confirm that UID2 SDK version dependency is correct in `Package.swift`
+      * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/cfc508a79af81d5b8d0aefdb60881567ea08fd24/Package.swift#L18
     * Update / Confirm `adapterVersion()` in `UID2GMAMediationAdapter.swift` is set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/cfc508a79af81d5b8d0aefdb60881567ea08fd24/Sources/UID2GMAPlugin/UID2GMAMediationAdapter.swift#L40-L46
     * Add and / or Edit any ADRs that support this release
