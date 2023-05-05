@@ -15,7 +15,7 @@ let package = Package(
             targets: ["UID2GMAPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", from: "0.1.0"),
+        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", from: "0.2.0"),
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", "9.0.0"..<"11.0.0")
     ],
     targets: [
