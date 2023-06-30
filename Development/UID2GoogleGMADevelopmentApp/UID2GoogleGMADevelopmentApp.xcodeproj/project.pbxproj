@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A217470F29E79B5600EC20DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217470E29E79B5600EC20DF /* AppDelegate.swift */; };
-		A217471129E79B5600EC20DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217471029E79B5600EC20DF /* SceneDelegate.swift */; };
 		A217471329E79B5600EC20DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217471229E79B5600EC20DF /* ViewController.swift */; };
 		A217471629E79B5600EC20DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A217471429E79B5600EC20DF /* Main.storyboard */; };
 		A217471829E79B5600EC20DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217471729E79B5600EC20DF /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		A217470B29E79B5600EC20DF /* UID2GoogleGMADevelopmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UID2GoogleGMADevelopmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A217470E29E79B5600EC20DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A217471029E79B5600EC20DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A217471229E79B5600EC20DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A217471529E79B5600EC20DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A217471729E79B5600EC20DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			children = (
 				E23A114729E84C2800FAE364 /* AppData */,
 				A217470E29E79B5600EC20DF /* AppDelegate.swift */,
-				A217471029E79B5600EC20DF /* SceneDelegate.swift */,
 				A217471229E79B5600EC20DF /* ViewController.swift */,
 				A217471429E79B5600EC20DF /* Main.storyboard */,
 				A217471729E79B5600EC20DF /* Assets.xcassets */,
@@ -212,7 +209,6 @@
 				E23A114F29E84C4800FAE364 /* AppDataLoader.swift in Sources */,
 				E23A114C29E84C4800FAE364 /* Date+AppExtensions.swift in Sources */,
 				A217470F29E79B5600EC20DF /* AppDelegate.swift in Sources */,
-				A217471129E79B5600EC20DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +361,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UID2GoogleGMADevelopmentApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -396,7 +392,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UID2GoogleGMADevelopmentApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
