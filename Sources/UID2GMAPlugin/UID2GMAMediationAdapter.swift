@@ -41,7 +41,7 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
     static func adapterVersion() -> GADVersionNumber {
         var version = GADVersionNumber()
         version.majorVersion = 0
-        version.minorVersion = 2
+        version.minorVersion = 3
         version.patchVersion = 0
         return version
     }
