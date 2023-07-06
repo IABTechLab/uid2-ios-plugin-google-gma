@@ -11,6 +11,7 @@ import UID2
 
 /// Adapter to connect UID2 to Google Mobile Ads
 /// https://developers.google.com/admob/ios/open-bidding-adapter
+@objc(UID2GMAMediationAdapter)
 class UID2GMAMediationAdapter: NSObject {
     
     required override init() { }
@@ -30,7 +31,7 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
     func collectSignals(for params: GADRTBRequestParameters, completionHandler: @escaping GADRTBSignalCompletionHandler) {
         Task {
             guard let advertisingToken = await UID2Manager.shared.getAdvertisingToken() else {
-                completionHandler(nil, UID2GoogleAdapterErrors.advertisingTokenNotFoundForGMA)
+                completionHandler(nil, AdvertisingTokenNotFoundError())
                 return
             }
             completionHandler(advertisingToken, nil)

@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
       "state" : {
-        "revision" : "886501bfff8bd8cc22899de2c1779e479c96f9ff",
-        "version" : "10.3.0"
+        "revision" : "a6e24f2167295d95371bfc3049e47381a73a9e43",
+        "version" : "10.7.0"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/IABTechLab/uid2-ios-sdk.git",
       "state" : {
-        "revision" : "9706cbc8959593a81e5aea82926bc41ac9bbb9d3",
-        "version" : "0.1.0"
+        "revision" : "6204cbc27ef3bd48065e1fbd355958a6f03e248c",
+        "version" : "0.2.0"
       }
     }
   ],

@@ -94,12 +94,12 @@ final class UID2GMAMediationAdapterTests: XCTestCase {
             
             adapter.collectSignals(for: GADRTBRequestParameters(), completionHandler:  { signal, error in
                 
-                guard let error = error as? UID2GoogleAdapterErrors else {
+                guard let error = error as? AdvertisingTokenNotFoundError else {
                     continuation.resume(throwing: "Error returned was not expected type.")
                     return
                 }
                 
-                XCTAssertEqual(UID2GoogleAdapterErrors.advertisingTokenNotFoundForGMA, error)
+                XCTAssertEqual(AdvertisingTokenNotFoundError(), error)
             
                 continuation.resume(returning: "Successful Test")
                 
@@ -110,11 +110,11 @@ final class UID2GMAMediationAdapterTests: XCTestCase {
     
     }
     
+    /// 🟩 - GMA Adapter Ad SDK Version Check Success
     func testAdSDKVersion() async throws {
         
         let adSDKVersion = UID2GMAMediationAdapter.adSDKVersion()
         let sdkVersion = await UID2Manager.shared.sdkVersion
-
         
         XCTAssertEqual(sdkVersion.major, adSDKVersion.majorVersion)
         XCTAssertEqual(sdkVersion.minor, adSDKVersion.minorVersion)
