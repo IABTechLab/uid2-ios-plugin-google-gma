@@ -26,7 +26,6 @@ let package = Package(
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
             ],
             resources: [
-                .copy("Properties/sdk_properties.plist"),
                 .copy("PrivacyInfo.xcprivacy")
             ]),
         .testTarget(
