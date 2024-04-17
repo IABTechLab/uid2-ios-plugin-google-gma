@@ -24,6 +24,9 @@ let package = Package(
             dependencies: [
                 .product(name: "UID2", package: "uid2-ios-sdk"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
+            ],
+            resources: [
+                .copy("PrivacyInfo.xcprivacy")
             ]),
         .testTarget(
             name: "UID2GMAPluginTests",
