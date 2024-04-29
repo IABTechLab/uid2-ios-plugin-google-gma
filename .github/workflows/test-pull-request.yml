@@ -24,5 +24,11 @@ jobs:
       - name: Run unit tests
         run: xcodebuild test -scheme UID2GMAPluginTests -sdk iphonesimulator16.2 -destination "OS=16.2,name=iPhone 14"
 
+  vulnerability-scan:
+    name: Vulnerability Scan
+    runs-on: ubuntu-latest
+    needs: [swift-code-checks]
+
+    steps:
       - name: Vulnerability Scan
         uses: IABTechLab/uid2-shared-actions/actions/vulnerability_scan_filesystem@v2
