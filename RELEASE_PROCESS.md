@@ -15,12 +15,16 @@ Version Numbering follows [Semantic Versioning](https://semver.org) standards.  
       * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/cfc508a79af81d5b8d0aefdb60881567ea08fd24/Package.swift#L18
     * Update / Confirm `adapterVersion()` in `UID2GMAMediationAdapter.swift` is set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/cfc508a79af81d5b8d0aefdb60881567ea08fd24/Sources/UID2GMAPlugin/UID2GMAMediationAdapter.swift#L40-L46
+    * Update / Confirm `version` and `source.tag` in `UID2GMAPlugin.podspec.json` are set to expected version
+      * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/main/UID2GMAPlugin.podspec.jsonL6-L12
     * Add and / or Edit any ADRs that support this release
 2. Merge Release PR into `main`
 3. Use GitHub Releases to Publish the release
     * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/releases/new
     * Create tag on `main` for the commit created by merge of the Release PR
     * Document any Release Notes
-4. Create a Next Release PR
+4. Publish CocoaPod to trunk
+    * `pod trunk push UID2GMAPlugin.podspec.json`
+5. Create a Next Release PR
     * Set `adapterVersion()` in `UID2GMAMediationAdapter.swift` to the expected next (likely minor) release version of the SDK.
-5. Merge Next Release PR **BEFORE ANY CODE FOR NEXT RELEASE IS MERGED**
+6. Merge Next Release PR **BEFORE ANY CODE FOR NEXT RELEASE IS MERGED**
