@@ -42,7 +42,7 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
         var version = GADVersionNumber()
         version.majorVersion = 0
         version.minorVersion = 3
-        version.patchVersion = 0
+        version.patchVersion = 1
         return version
     }
     
