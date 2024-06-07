@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// Advertising Token Not Found for IMA Adapter
-@objc(AdvertisingTokenNotFoundError)
+/// Advertising Token Not Found for GMA Adapter
+@objc(UID2GMAAdvertisingTokenNotFoundError)
 public class AdvertisingTokenNotFoundError: NSError {
     
     convenience init() {
