@@ -29,7 +29,7 @@ For the latest instructions on how to use this plugin, refer to the [UID2 GMA Pl
 
 ## Requirements
 
-* Xcode 14.0+
+* Xcode 15.0+
 
 | Platform | Minimum target | Swift Version |
 | --- | --- | --- |
