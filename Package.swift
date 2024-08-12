@@ -30,9 +30,7 @@ let package = Package(
             ]),
         .testTarget(
             name: "UID2GMAPluginTests",
-            dependencies: ["UID2GMAPlugin"],
-            resources: [
-                .copy("TestData")
-            ])
+            dependencies: ["UID2GMAPlugin"]
+        )
     ]
 )
