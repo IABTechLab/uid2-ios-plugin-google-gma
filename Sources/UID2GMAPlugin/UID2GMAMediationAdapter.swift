@@ -11,6 +11,7 @@ import UID2
 
 /// Adapter to connect UID2 to Google Mobile Ads
 /// https://developers.google.com/admob/ios/open-bidding-adapter
+@available(iOS 13, *)
 @objc(UID2GMAMediationAdapter)
 class UID2GMAMediationAdapter: NSObject {
     
@@ -18,6 +19,7 @@ class UID2GMAMediationAdapter: NSObject {
     
 }
 
+@available(iOS 13, *)
 extension UID2GMAMediationAdapter: GADRTBAdapter {
 
     static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
@@ -41,8 +43,8 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
     static func adapterVersion() -> GADVersionNumber {
         var version = GADVersionNumber()
         version.majorVersion = 0
-        version.minorVersion = 3
-        version.patchVersion = 3
+        version.minorVersion = 4
+        version.patchVersion = 0
         return version
     }
     
