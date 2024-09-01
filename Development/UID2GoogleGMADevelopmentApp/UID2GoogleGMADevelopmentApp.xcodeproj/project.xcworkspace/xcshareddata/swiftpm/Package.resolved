@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/IABTechLab/uid2-ios-sdk.git",
       "state" : {
-        "revision" : "91c290d29a7093cfc209eca493d1fee80c17e16a",
-        "version" : "1.2.4"
+        "revision" : "02dc358fa6977357bffc12bad81c7d5650170e27",
+        "version" : "1.7.0"
       }
     }
   ],
