@@ -63,6 +63,15 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     /// Text that indicates current coin count.
     @IBOutlet weak var coinCountLabel: UILabel!
     
+    private let manager: UID2Manager = {
+        let isEUID = Bundle.main.object(forInfoDictionaryKey: "UID2EnvironmentEUID") as? Bool ?? false
+        if isEUID {
+            return EUIDManager.shared
+        } else {
+            return UID2Manager.shared
+        }
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -110,7 +119,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
                                             refreshExpires: refreshExpires,
                                             refreshResponseKey: uid2IdentityFromFile.refreshResponseKey)
             
-            await UID2Manager.shared.setIdentity(uid2Identity)
+            await manager.setIdentity(uid2Identity)
         } catch {
             print("Error loading UID2Identity")
         }

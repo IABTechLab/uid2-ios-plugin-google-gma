@@ -15,6 +15,8 @@ Version Numbering follows [Semantic Versioning](https://semver.org) standards.  
       * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/cfc508a79af81d5b8d0aefdb60881567ea08fd24/Package.swift#L18
     * Update / Confirm `adapterVersion()` in `UID2GMAMediationAdapter.swift` is set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/cfc508a79af81d5b8d0aefdb60881567ea08fd24/Sources/UID2GMAPlugin/UID2GMAMediationAdapter.swift#L40-L46
+    * Update / Confirm `adapterVersion()` in `EUIDGMAMediationAdapter.swift` is set to expected version
+      * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/ed1ffe2c710c58da2867d9ea0b888ecfa1aedefc/Sources/UID2GMAPlugin/EUIDGMAMediationAdapter.swift#L38-L44
     * Update / Confirm `version` and `source.tag` in `UID2GMAPlugin.podspec.json` are set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/blob/main/UID2GMAPlugin.podspec.jsonL6-L12
     * Add and / or Edit any ADRs that support this release

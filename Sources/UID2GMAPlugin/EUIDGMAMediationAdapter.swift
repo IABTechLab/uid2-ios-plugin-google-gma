@@ -1,45 +1,42 @@
 //
-//  UID2GMAMediationAdapter.swift
+//  EUIDGMAMediationAdapter.swift
 //  
-//
-//  Created by Brad Leege on 3/20/23.
-//
 
 import Foundation
 import GoogleMobileAds
 import UID2
 
-/// Adapter to connect UID2 to Google Mobile Ads
+/// Adapter to connect EUID to Google Mobile Ads
 /// https://developers.google.com/admob/ios/open-bidding-adapter
 @available(iOS 13, *)
-@objc(UID2GMAMediationAdapter)
-class UID2GMAMediationAdapter: NSObject {
-    
+@objc(EUIDGMAMediationAdapter)
+class EUIDGMAMediationAdapter: NSObject {
+
     required override init() { }
-    
+
 }
 
 @available(iOS 13, *)
-extension UID2GMAMediationAdapter: GADRTBAdapter {
+extension EUIDGMAMediationAdapter: GADRTBAdapter {
 
     static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
 
         // Ensure UID2Manager has started
-        _ = UID2Manager.shared
+        _ = EUIDManager.shared
 
         completionHandler(nil)
     }
-        
+
     func collectSignals(for params: GADRTBRequestParameters, completionHandler: @escaping GADRTBSignalCompletionHandler) {
         Task {
-            guard let advertisingToken = await UID2Manager.shared.getAdvertisingToken() else {
+            guard let advertisingToken = await EUIDManager.shared.getAdvertisingToken() else {
                 completionHandler(nil, AdvertisingTokenNotFoundError())
                 return
             }
             completionHandler(advertisingToken, nil)
         }
     }
-    
+
     static func adapterVersion() -> GADVersionNumber {
         var version = GADVersionNumber()
         version.majorVersion = 1
@@ -47,7 +44,7 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
         version.patchVersion = 0
         return version
     }
-    
+
     static func adSDKVersion() -> GADVersionNumber {
         let uid2Version = UID2SDKProperties.getUID2SDKVersion()
         var version = GADVersionNumber()
@@ -56,9 +53,9 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
         version.patchVersion = uid2Version.patch
         return version
     }
-    
+
     static func networkExtrasClass() -> GADAdNetworkExtras.Type? {
         return nil
     }
-    
+
 }
