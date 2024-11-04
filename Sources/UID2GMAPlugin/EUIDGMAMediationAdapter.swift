@@ -20,7 +20,10 @@ class EUIDGMAMediationAdapter: NSObject {
 extension EUIDGMAMediationAdapter: GADRTBAdapter {
 
     static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
-
+        guard #available(iOS 13, *) else {
+            completionHandler(OperatingSystemUnsupportedError())
+            return
+        }
         // Ensure UID2Manager has started
         _ = EUIDManager.shared
 
@@ -28,6 +31,10 @@ extension EUIDGMAMediationAdapter: GADRTBAdapter {
     }
 
     func collectSignals(for params: GADRTBRequestParameters, completionHandler: @escaping GADRTBSignalCompletionHandler) {
+        guard #available(iOS 13, *) else {
+            completionHandler(nil, OperatingSystemUnsupportedError())
+            return
+        }
         Task {
             guard let advertisingToken = await EUIDManager.shared.getAdvertisingToken() else {
                 completionHandler(nil, AdvertisingTokenNotFoundError())
