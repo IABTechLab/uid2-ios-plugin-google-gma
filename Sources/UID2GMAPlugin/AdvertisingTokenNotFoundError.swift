@@ -9,7 +9,7 @@ import Foundation
 
 /// Advertising Token Not Found for GMA Adapter
 @objc(UID2GMAAdvertisingTokenNotFoundError)
-public class AdvertisingTokenNotFoundError: NSError {
+public class AdvertisingTokenNotFoundError: NSError, @unchecked Sendable {
     
     convenience init() {
         self.init(domain: "UID", code: 1)

@@ -23,7 +23,10 @@ class UID2GMAMediationAdapter: NSObject {
 extension UID2GMAMediationAdapter: GADRTBAdapter {
 
     static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
-
+        guard isOperatingSystemSupported else {
+            completionHandler(OperatingSystemUnsupportedError())
+            return
+        }
         // Ensure UID2Manager has started
         _ = UID2Manager.shared
 
@@ -31,6 +34,10 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
     }
         
     func collectSignals(for params: GADRTBRequestParameters, completionHandler: @escaping GADRTBSignalCompletionHandler) {
+        guard isOperatingSystemSupported else {
+            completionHandler(nil, OperatingSystemUnsupportedError())
+            return
+        }
         Task {
             guard let advertisingToken = await UID2Manager.shared.getAdvertisingToken() else {
                 completionHandler(nil, AdvertisingTokenNotFoundError())
@@ -44,7 +51,7 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
         var version = GADVersionNumber()
         version.majorVersion = 1
         version.minorVersion = 0
-        version.patchVersion = 0
+        version.patchVersion = 1
         return version
     }
     
