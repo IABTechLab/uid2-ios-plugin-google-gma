@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Initialize Google Mobile Ads SDK
-        GADMobileAds.sharedInstance().start()
+        MobileAds.shared.start()
         
         return true
     }

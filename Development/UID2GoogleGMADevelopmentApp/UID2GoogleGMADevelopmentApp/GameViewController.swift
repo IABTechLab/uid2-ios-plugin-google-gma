@@ -24,7 +24,7 @@ import GoogleMobileAds
 import UID2
 import UIKit
 
-class GameViewController: UIViewController, GADFullScreenContentDelegate {
+class GameViewController: UIViewController, FullScreenContentDelegate {
     
     private enum GameState: Int {
         case notStarted
@@ -40,7 +40,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     private static let adIntroLength = 3.0
     
     /// The rewarded interstitial ad.
-    private var rewardedInterstitialAd: GADRewardedInterstitialAd?
+    private var rewardedInterstitialAd: RewardedInterstitialAd?
     
     /// The countdown timer.
     private var timer: Timer?
@@ -77,7 +77,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         
         Task {
             await loadUID2Identity()
-            let versionNumber = GADMobileAds.sharedInstance().versionNumber
+            let versionNumber = MobileAds.shared.versionNumber
             print("Google Mobile Ads SDK version: \(versionNumber.majorVersion).\(versionNumber.minorVersion).\(versionNumber.patchVersion)")
         }
         
@@ -145,9 +145,9 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     }
     
     private func loadRewardedInterstitialAd() {
-        let request = GAMRequest()
-        GADRewardedInterstitialAd.load(
-            withAdUnitID: "/21775744923/example/rewarded_interstitial", request: request
+        let request = AdManagerRequest()
+        RewardedInterstitialAd.load(
+            with: "/21775744923/example/rewarded_interstitial", request: request
         ) { (ad, error) in
             if let error = error {
                 print("Failed to load rewarded interstitial ad with error: \(error.localizedDescription)")
@@ -240,7 +240,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
             print("Ad wasn't ready")
             return
         }
-        ad.present(fromRootViewController: self) {
+        ad.present(from: self) {
             let reward = ad.adReward
             print(
                 "Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)"
@@ -255,20 +255,19 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         startNewGame()
     }
     
-    // MARK: - GADFullScreenContentDelegate
-    
-    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    // MARK: - FullScreenContentDelegate
+
+    func adWillPresentFullScreenContent(_ ad: any FullScreenPresentingAd) {
         print("Ad did present full screen content.")
     }
     
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error)
-    {
+    func ad(_ ad: any FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         print("Ad failed to present full screen content with error \(error.localizedDescription).")
         self.rewardedInterstitialAd = nil
         self.playAgainButton.isHidden = false
     }
     
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    func adDidDismissFullScreenContent(_ ad: any FullScreenPresentingAd) {
         print("Ad did dismiss full screen content.")
         self.rewardedInterstitialAd = nil
         self.playAgainButton.isHidden = false

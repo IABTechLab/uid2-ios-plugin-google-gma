@@ -3,13 +3,13 @@
   "summary": "A plugin for integrating UID2 and Google GMA into iOS applications.",
   "homepage": "https://unifiedid.com/",
   "license": "Apache License, Version 2.0",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "authors": {
     "David Snabel-Caunt": "dave.snabel-caunt@thetradedesk.com"
   },
   "source": {
     "git": "https://github.com/IABTechLab/uid2-ios-plugin-google-gma.git",
-    "tag": "v1.0.1"
+    "tag": "v2.0.0"
   },
   "platforms": {
     "ios": "12.0"
@@ -27,8 +27,7 @@
   ],
   "dependencies": {
     "Google-Mobile-Ads-SDK": [
-      ">= 10.7",
-      "< 12.0"
+      "~> 12.0"
     ],
     "UID2": [
       ">= 1.7.0",

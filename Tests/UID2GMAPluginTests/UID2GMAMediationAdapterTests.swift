@@ -26,7 +26,7 @@ final class UID2GMAMediationAdapterTests: XCTestCase {
             )
         )
 
-        let signal = try await UID2GMAMediationAdapter().collectSignals(for: GADRTBRequestParameters())
+        let signal = try await UID2GMAMediationAdapter().collectSignals(for: RTBRequestParameters())
 
         // Confirm that Adapter returns expected data
         XCTAssertEqual("uid2-test-token", signal)
@@ -38,7 +38,7 @@ final class UID2GMAMediationAdapterTests: XCTestCase {
         await UID2Manager.shared.resetIdentity()
 
         let result = await Task<String?, Error> {
-            try await UID2GMAMediationAdapter().collectSignals(for: GADRTBRequestParameters())
+            try await UID2GMAMediationAdapter().collectSignals(for: RTBRequestParameters())
         }.result
         XCTAssertThrowsError(try result.get()) { error in
             let adapterError = error as? AdvertisingTokenNotFoundError
@@ -62,7 +62,7 @@ final class UID2GMAMediationAdapterTests: XCTestCase {
         )
 
         let result = await Task<String?, Error> {
-            try await UID2GMAMediationAdapter().collectSignals(for: GADRTBRequestParameters())
+            try await UID2GMAMediationAdapter().collectSignals(for: RTBRequestParameters())
         }.result
         XCTAssertThrowsError(try result.get()) { error in
             let adapterError = error as? AdvertisingTokenNotFoundError
