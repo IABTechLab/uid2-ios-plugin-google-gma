@@ -24,7 +24,7 @@ final class EUIDGMAMediationAdapterTests: XCTestCase {
             )
         )
 
-        let signal = try await EUIDGMAMediationAdapter().collectSignals(for: GADRTBRequestParameters())
+        let signal = try await EUIDGMAMediationAdapter().collectSignals(for: RTBRequestParameters())
 
         // Confirm that Adapter returns expected data
         XCTAssertEqual("euid-test-token", signal)
@@ -36,7 +36,7 @@ final class EUIDGMAMediationAdapterTests: XCTestCase {
         await EUIDManager.shared.resetIdentity()
 
         let result = await Task<String?, Error> {
-            try await EUIDGMAMediationAdapter().collectSignals(for: GADRTBRequestParameters())
+            try await EUIDGMAMediationAdapter().collectSignals(for: RTBRequestParameters())
         }.result
         XCTAssertThrowsError(try result.get()) { error in
             let adapterError = error as? AdvertisingTokenNotFoundError
@@ -60,7 +60,7 @@ final class EUIDGMAMediationAdapterTests: XCTestCase {
         )
 
         let result = await Task<String?, Error> {
-            try await EUIDGMAMediationAdapter().collectSignals(for: GADRTBRequestParameters())
+            try await EUIDGMAMediationAdapter().collectSignals(for: RTBRequestParameters())
         }.result
         XCTAssertThrowsError(try result.get()) { error in
             let adapterError = error as? AdvertisingTokenNotFoundError

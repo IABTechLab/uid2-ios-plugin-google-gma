@@ -20,9 +20,9 @@ class UID2GMAMediationAdapter: NSObject {
 }
 
 @available(iOS 13, *)
-extension UID2GMAMediationAdapter: GADRTBAdapter {
+extension UID2GMAMediationAdapter: RTBAdapter {
 
-    static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
+    static func setUp(with configuration: MediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
         guard isOperatingSystemSupported else {
             completionHandler(OperatingSystemUnsupportedError())
             return
@@ -33,7 +33,7 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
         completionHandler(nil)
     }
         
-    func collectSignals(for params: GADRTBRequestParameters, completionHandler: @escaping GADRTBSignalCompletionHandler) {
+    func collectSignals(for params: RTBRequestParameters, completionHandler: @escaping GADRTBSignalCompletionHandler) {
         guard isOperatingSystemSupported else {
             completionHandler(nil, OperatingSystemUnsupportedError())
             return
@@ -47,24 +47,24 @@ extension UID2GMAMediationAdapter: GADRTBAdapter {
         }
     }
     
-    static func adapterVersion() -> GADVersionNumber {
-        var version = GADVersionNumber()
-        version.majorVersion = 1
+    static func adapterVersion() -> VersionNumber {
+        var version = VersionNumber()
+        version.majorVersion = 2
         version.minorVersion = 0
-        version.patchVersion = 1
+        version.patchVersion = 0
         return version
     }
     
-    static func adSDKVersion() -> GADVersionNumber {
+    static func adSDKVersion() -> VersionNumber {
         let uid2Version = UID2SDKProperties.getUID2SDKVersion()
-        var version = GADVersionNumber()
+        var version = VersionNumber()
         version.majorVersion = uid2Version.major
         version.minorVersion = uid2Version.minor
         version.patchVersion = uid2Version.patch
         return version
     }
     
-    static func networkExtrasClass() -> GADAdNetworkExtras.Type? {
+    static func networkExtrasClass() -> AdNetworkExtras.Type? {
         return nil
     }
     
