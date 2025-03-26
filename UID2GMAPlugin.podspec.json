@@ -23,7 +23,7 @@
     "UID2GMAPlugin": ["Sources/UID2GMAPlugin/PrivacyInfo.xcprivacy"]
   },
   "source_files": [
-    "Sources/UID2GMAPlugin/**/*"
+    "Sources/UID2GMAPlugin/**/*.swift"
   ],
   "dependencies": {
     "Google-Mobile-Ads-SDK": [
