@@ -51,7 +51,7 @@ extension UID2GMAMediationAdapter: RTBAdapter {
         var version = VersionNumber()
         version.majorVersion = 2
         version.minorVersion = 0
-        version.patchVersion = 0
+        version.patchVersion = 1
         return version
     }
     
