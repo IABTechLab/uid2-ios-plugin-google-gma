@@ -46,9 +46,9 @@ extension EUIDGMAMediationAdapter: RTBAdapter {
 
     static func adapterVersion() -> VersionNumber {
         var version = VersionNumber()
-        version.majorVersion = 2
+        version.majorVersion = 3
         version.minorVersion = 0
-        version.patchVersion = 2
+        version.patchVersion = 0
         return version
     }
 
