@@ -30,8 +30,9 @@ jobs:
       - name: Run unit tests
         run: xcodebuild test -scheme UID2GMAPluginTests -destination "OS=18.2,name=iPhone 16"
 
+        # Use --allow-warnings because the GMA plugin emits warnings outside of our control
       - name: Lint pod spec
-        run: pod lib lint --verbose
+        run: pod lib lint --verbose --allow-warnings
 
   vulnerability-scan:
     name: Vulnerability Scan
